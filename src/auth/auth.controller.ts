@@ -8,7 +8,7 @@ export class AuthController {
   @Post('register')
   register(@Body() registerUserDTO: RegisterDTO) {
     const result = this.authService.registerUser(registerUserDTO)
-    return { message: 'User registered successfully' };
+    return result
   }
 
   @Post('login')
